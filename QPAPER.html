@@ -1,0 +1,146 @@
+<html>
+<body>
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-teal.css">
+<link rel="stylesheet" href="new.css">
+<link href="font.css" rel='stylesheet' type='text/css'>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
+    <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open()"><img src="IMG/menu.png"></button>
+    <span class="w3-right">BGS CONNECT</span>
+</div>
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:200px;"><br>
+    <div class="w3-container">
+        <a href="index.html"><h5>BGS CONNECT</a></h5>
+    </div>
+    <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">X &nbsp;Close Menu</a>
+    <a href="#" class="w3-padding w3-blue">Overview</a>
+    <a href="SYLLABUS_INDEX.html" class="w3-padding">Syllabus</a>
+    <a href="#" class="w3-padding">Forum</a>
+    <a href="QP_INDEX.html" class="w3-padding">Question Paper</a>
+    <a href="COLLEGE_CODES.html" class="w3-padding">College Codes</a>
+    <a href="TIME_TABLE.html" class="w3-padding">Time Table</a>
+    <a href="ABOUT.html" class="w3-padding">Team SIGMA</a><br><br>
+</nav>
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
+
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+    <script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+}
+
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+}
+</script>
+
+    <div class="w3-container"><h5><b>QUESTION PAPERS COLLECTION</b></h5>	</div>
+
+    <style>
+        input, select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=submit] {
+        width: 100%;
+        background-color: royalblue;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+    </style>
+
+<form class="w3-container" id="RANK" name="RANK" method="post" action="" onsubmit="return getRANK(this.usn.value,this.sem.value)">
+    <table>
+        <tr><th><b>BRANCH </b></th><th> <select name="sem">
+            <option value="#">SELECT BRANCH</option>
+
+            <option value="1">FIRST YEAR</option>
+        <option value="2">CIVIL ENGINEERING</option>
+        <option value="3">COMPUTER SCIENCE ENGINEERING</option>
+        <option value="4">ELECTRONICS AND COMMUNICATION</option>
+        <option value="5">INFORMATION SCIENCE</option>
+        <option value="6">MECHANICAL ENGINEERING</option>
+    </select></th></tr></label><P>
+        <tr><th><b>SEMESTER </b></th><th> <select name="usn">
+            <option value="#">SELECT SEM</option>
+            <option value="1">FIRST YEAR</option>
+    <option value="3">3<sup>RD</sup> SEMESTER</option>
+    <option value="4">4<sup>TH</sup> SEMESTER</option>
+    <option value="5">5<sup>TH</sup> SEMESTER</option>
+    <option value="6">6<sup>TH</sup> SEMESTER</option>
+    <option value="7">7<sup>TH</sup> SEMESTER</option>
+    <option value="8">8<sup>TH</sup> SEMESTER</option>
+    </table>
+</select></th></tr><label> <p>
+
+        <center><input type="SUBMIT" name="submit" value="SUBMIT" align="center" ></center>
+</form>
+</body>  </head>
+<script type="text/javascript">
+
+function getRANK(sem,val){
+base = 'QP/';
+if(val==2)
+val = 'CV';
+else if(val==3)
+val = 'CS';
+else if(val==4)
+val = 'EC';
+else if(val==5)
+val = 'IS';
+else if(val==6)
+val = 'ME';
+if(sem==3)
+end = '/IIISEM.html';
+else if(sem==4)
+end = '/IVSEM.html';
+else if(sem==5)
+end = '/VSEM.html';
+else if(sem==6)
+end = '/VISEM.html';
+else if(sem==7)
+end = '/VIISEM.html';
+else if(sem==8)
+end = '/VIIISEM.html';
+if(val==1){
+val = 'FY/';
+end = 'FY.html';
+}
+
+   location = base + val + end;
+   return false;
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

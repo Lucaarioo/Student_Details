@@ -1,0 +1,334 @@
+
+<!-- saved from url=(0034)http://localhost/time/markedit.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>Welcome back NANDAN,<br> Your login is successfull<br><!--Time table script done by Lucario (Nandan) for BGS Connect-->
+
+
+<title>Time Table</title>
+
+
+<link rel="stylesheet" href="./Time Table_files/w3.css">
+<link rel="stylesheet" href="./Time Table_files/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="./Time Table_files/css.css">
+<link rel="stylesheet" href="./Time Table_files/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<script src="./Time Table_files/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+    $('#option').on('change', function() {
+      if ( this.value == "old")
+      //.....................^.......
+      {
+     $("#old").show();
+	$("#cbcs").hide();
+      }
+	if(this.value == "cbcs")
+	{
+	$("#old").hide();
+	$("#cbcs").show();
+	} 
+});
+});</script>
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+</style>
+<style>
+input {
+    width: 50px;
+}
+.other {
+    width: auto;
+
+}
+</style>
+<button onclick="myFunction(&#39;ISEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align w3-theme-d1"><i class="fa fa-calendar-check-o fa-fw w3-margin-right">
+
+</i> FIRST SEMESTER</button>
+          <div id="ISEM" class="w3-accordion-content w3-container w3-show">
+<div class="w3-container">          
+
+SCHEME:<select name="scheme" id="option" required="">
+<option selected="" value="old">OLD</option>
+<option selected="" value="cbcs">CBCS</option>
+<option selected="" value="#">Select scheme</option>
+</select>
+<form style="" id="old" name="myform" action="http://localhost/time/marksave1.php" method="post">
+<p>
+NAME: <input class="other" name="name" type="hidden" value="NANDAN">NANDAN<br>
+USN: <input class="other" type="hidden" maxlength="10" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+FIRST SEMESTER OLD SCHEME:</p><p>
+<table>
+<tbody><tr><td></td><td>INTERNAL MARKS</td><td>EXTERNAL MARKS</td></tr>
+<tr><td>ENGINEERING MATHS I</td><td><input type="text" name="fim1"></td><td><input type="text" name="fm1"></td></tr><tr>
+</tr><tr><td>ENGINEERING PHYSICS</td><td><input type="text" name="fim2"></td><td><input type="text" name="fm2"></td></tr>
+<tr><td>ELEMENTS OF CIVIL ENGG. &amp; MECHANICS</td><td><input type="text" name="fim3"></td><td><input type="text" name="fm3"></td></tr>
+<tr><td>ELEMENTS OF MECHANICAL ENGG.</td><td><input type="text" name="fim4"></td><td><input type="text" name="fm4"></td></tr>
+<tr><td>BASIC ELECTRICAL ENGINEERING</td><td><input type="text" name="fim5"></td><td><input type="text" name="fm5"></td></tr>
+<tr><td>WORKSHOP PRACTICE</td><td><input type="text" name="fim6"></td><td><input type="text" name="fm6"></td></tr>
+<tr><td>ENGINEERING PHYSICS LAB</td><td><input type="text" name="fim7"></td><td><input type="text" name="fm7"></td></tr>
+<tr><td>CONST. OF INDIA, PROF. ETHICS &amp; HUMAN RIGHTS</td><td><input type="text" name="fim8"></td><td><input type="text" name="fm8"></td></tr>
+</tbody></table>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+<form style="display:none;" id="cbcs" name="myform" action="http://localhost/time/cmarksave1.php" method="post">
+
+FIRST SEMESTER CBCS SCHEME:<p>
+</p><p>
+NAME: <input class="other" name="name" type="hidden" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+<table>
+<tbody><tr><td>SUBJECT NAME</td><td>CREDIT EARNED</td><td>GRADE POINTS</td>
+</tr><tr><td>ENGINEERING MATHS I</td><td><input type="text" name="c1"></td><td><input type="text" name="g1"></td></tr>
+<tr><td>ENGINEERING PHYSICS</td><td><input type="text" name="c2"></td><td><input type="text" name="g2"></td></tr>
+<tr><td>ELEMENTS OF CIVIL ENGG. &amp; MECHANICS</td><td><input type="text" name="c3"></td><td><input type="text" name="g3"></td></tr>
+<tr><td>ELEMENTS OF MECHANICAL ENGINEERING</td><td><input type="text" name="c4"></td><td><input type="text" name="g4"></td></tr>
+<tr><td>BASIC ELECTRICAL ENGINEERING</td><td><input type="text" name="c5"></td><td><input type="text" name="g5"></td></tr>
+<tr><td>WORKSHOP PRACTICE</td><td><input type="text" name="c6"></td><td><input type="text" name="g6"></td></tr>
+<tr><td>ENGINEERING PHYSICS LAB</td><td><input type="text" name="c7"></td><td><input type="text" name="g7"></td></tr>
+<tr><td>CONST. OF INDIA, PROF. ETHICS &amp; HUMAN RIGHTS</td><td><select name="g8" id="option" required="">
+                                                             <option selected="" value="P">PASS</option>
+                                                             <option selected="" value="F">FAIL</option>
+                                                             <option selected="" value="#">PASS/FAIL</option>
+                                                             </select></td></tr>
+</tbody></table>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+</div>
+<button onclick="myFunction(&#39;IISEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> SECOND SEMESTER</button>
+          <div id="IISEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave2.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+SECOND SEMESTER :</p><p>
+<input type="text" name="sm1"><br>
+<input type="text" name="sm2"><br>
+<input type="text" name="sm3"><br>
+<input type="text" name="sm4"><br>
+<input type="text" name="sm5"><br>
+<input type="text" name="sm6"><br>
+<input type="text" name="sm7"><br>
+<input type="text" name="sm8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+<button onclick="myFunction(&#39;IIISEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> THIRD SEMESTER</button>
+          <div id="IIISEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave3.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+THIRD SEMESTER :</p><p>
+<input type="text" name="tm1"><br>
+<input type="text" name="tm2"><br>
+<input type="text" name="tm3"><br>
+<input type="text" name="tm4"><br>
+<input type="text" name="tm5"><br>
+<input type="text" name="tm6"><br>
+<input type="text" name="tm7"><br>
+<input type="text" name="tm8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+<button onclick="myFunction(&#39;IVSEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> FOURTH SEMESTER</button>
+          <div id="IVSEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave4.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+FOURTH SEMESTER :</p><p>
+<input type="text" name="fom1"><br>
+<input type="text" name="fom2"><br>
+<input type="text" name="fom3"><br>
+<input type="text" name="fom4"><br>
+<input type="text" name="fom5"><br>
+<input type="text" name="fom6"><br>
+<input type="text" name="fom7"><br>
+<input type="text" name="fom8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+<button onclick="myFunction(&#39;VSEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> FIFTH SEMESTER</button>
+          <div id="VSEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave5.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+FIFTH SEMESTER :</p><p>
+<input type="text" name="fim1"><br>
+<input type="text" name="fim2"><br>
+<input type="text" name="fim3"><br>
+<input type="text" name="fim4"><br>
+<input type="text" name="fim5"><br>
+<input type="text" name="fim6"><br>
+<input type="text" name="fim7"><br>
+<input type="text" name="fim8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+<button onclick="myFunction(&#39;VISEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> SIXTH SEMESTER</button>
+          <div id="VISEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave6.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+SIXTH SEMESTER :</p><p>
+<input type="text" name="sim1"><br>
+<input type="text" name="sim2"><br>
+<input type="text" name="sim3"><br>
+<input type="text" name="sim4"><br>
+<input type="text" name="sim5"><br>
+<input type="text" name="sim6"><br>
+<input type="text" name="sim7"><br>
+<input type="text" name="sim8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+<button onclick="myFunction(&#39;VIISEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> SEVENTH SEMESTER</button>
+          <div id="VIISEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave7.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+SEVENTH SEMESTER :</p><p>
+<input type="text" name="sem1"><br>
+<input type="text" name="sem2"><br>
+<input type="text" name="sem3"><br>
+<input type="text" name="sem4"><br>
+<input type="text" name="sem5"><br>
+<input type="text" name="sem6"><br>
+<input type="text" name="sem7"><br>
+<input type="text" name="sem8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+<button onclick="myFunction(&#39;VIIISEM&#39;)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> EIGHTH SEMESTER</button>
+          <div id="VIIISEM" class="w3-accordion-content w3-container">
+          
+<form name="myform" action="http://localhost/time/marksave8.php" method="post">
+<p>
+NAME: <input class="other" type="hidden" name="name" value="NANDAN">NANDAN<br>
+USN: <input class="other" maxlength="10" type="hidden" name="usn" value="4BW14CS044">4BW14CS044<br>
+</p><p>
+
+EIGHTH SEMESTER :</p><p>
+<input type="text" name="em1"><br>
+<input type="text" name="em2"><br>
+<input type="text" name="em3"><br>
+<input type="text" name="em4"><br>
+<input type="text" name="em5"><br>
+<input type="text" name="em6"><br>
+<input type="text" name="em7"><br>
+<input type="text" name="em8"><br>
+<br>
+<input type="submit" value=" Save "><br>
+</p></form>
+</div>
+
+
+
+
+
+
+
+
+ 
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+</body></html>
